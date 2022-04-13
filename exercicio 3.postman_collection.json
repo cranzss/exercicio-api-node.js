@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "ddb21128-ec41-44c2-81dd-50a43a5ba5ca",
+		"name": "exercicio 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "clientes",
+			"item": [
+				{
+					"name": "clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8000/clientes/christian",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"clientes",
+								"christian"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registro clientes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Christian\",\r\n    \"sobrenome\":\"Cardoso\",\r\n    \"idade\": 19,\r\n    \"produto\": \"Guitarra\",\r\n    \"valor\": 1200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "funcionarios",
+			"item": [
+				{
+					"name": "funcionarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/funcionario/jorge",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"funcionario",
+								"jorge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar funcionario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "access",
+								"value": "senha",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/funcionarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adicionar funcionario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "access",
+								"value": "senha",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Heloísa\",\r\n    \"sobrenome\":\"Matos\",\r\n    \"idade\": 33,\r\n    \"cod\": 12,\r\n    \"data\": \"10/05/2019\",\r\n    \"dpto\": \"RH\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/funcionarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
